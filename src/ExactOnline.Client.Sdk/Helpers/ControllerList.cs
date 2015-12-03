@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using ExactOnline.Client.Sdk.Controllers;
 using ExactOnline.Client.Sdk.Interfaces;
 
@@ -19,12 +20,17 @@ namespace ExactOnline.Client.Sdk.Helpers
 		private readonly Hashtable _controllers;
 		private Dictionary<string, string> _services;
 
-		public ControllerList(IApiConnector connector, string baseUrl)
+        public ControllerList(IApiConnector connector, string baseUrl)
+            : this(connector, baseUrl, new Services())
+        {
+        }
+
+		public ControllerList(IApiConnector connector, string baseUrl, Services ServiceList)
 		{
 			_baseUrl = baseUrl;
 			_connector = connector;
 			_controllers = new Hashtable();
-			_services = new Services().Services;
+            _services = ServiceList.Services;
 		}
 
 		/// <summary>
@@ -69,7 +75,17 @@ namespace ExactOnline.Client.Sdk.Helpers
 				}
 				else if (_services.ContainsKey(typename))
 				{
-					conn = new ApiConnection(_connector, _baseUrl + _services[typename]);
+                    string url = _baseUrl;
+                    var cs = System.Attribute.GetCustomAttributes(typeof(T))
+                        .FirstOrDefault(a => a.TypeId != null && a.TypeId is Type 
+                            && ((Type)a.TypeId).Name == "CustomServiceAttribute");
+                    if (cs != null)
+                    {
+                        var system = cs.GetType().GetProperty("Beta").GetValue(cs, null);
+                        if (system is bool && (bool)system) 
+                            url = url.Replace("api/v1/", "api/v1/beta/");
+                    }
+                    conn = new ApiConnection(_connector, url + _services[typename]);
 				}
 				else
 				{

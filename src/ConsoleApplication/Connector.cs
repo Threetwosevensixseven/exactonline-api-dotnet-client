@@ -10,11 +10,11 @@ namespace ConsoleApplication
 		private readonly Uri _callbackUrl;
 		private readonly UserAuthorization _authorization;
 
-		public string EndPoint
+		public virtual string EndPoint
 		{
 			get
 			{
-				return "https://start.exactonline.nl";
+                return "https://start.exactonline.co.uk";
 			}
 		}
 

@@ -20,6 +20,7 @@ namespace ExactOnline.Client.Sdk.Helpers
 	public class ApiConnector : IApiConnector
 	{
 		private readonly AccessTokenManagerDelegate _accessTokenDelegate;
+        private readonly object _sync = new object();
 
 		#region Constructor
 
@@ -184,7 +185,8 @@ namespace ExactOnline.Client.Sdk.Helpers
 			// Get response. If this fails: Throw the correct Exception (for testability)
 			try
 			{
-				WebResponse response = request.GetResponse();
+                WebResponse response = null;
+                lock (_sync) response = request.GetResponse();
 				using (Stream responseStream = response.GetResponseStream())
 				{
 					if (responseStream != null)

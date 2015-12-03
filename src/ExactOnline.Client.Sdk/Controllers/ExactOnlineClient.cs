@@ -23,7 +23,7 @@ namespace ExactOnline.Client.Sdk.Controllers
 		/// <param name="exactOnlineUrl">The Exact Online URL for your country</param>
 		/// <param name="division">Division number</param>
 		/// <param name="accesstokenDelegate">Delegate that will be executed the access token is expired</param>
-		public ExactOnlineClient(string exactOnlineUrl, int division, AccessTokenManagerDelegate accesstokenDelegate)
+        public ExactOnlineClient(string exactOnlineUrl, int division, AccessTokenManagerDelegate accesstokenDelegate, Services ServiceList)
 		{
 			// Set culture for correct deserializing of API Response (comma and points)
 			_apiConnector = new ApiConnector(accesstokenDelegate);
@@ -35,8 +35,13 @@ namespace ExactOnline.Client.Sdk.Controllers
 			int currentDivision = (division > 0) ? division : GetDivision();
 			string serviceRoot = _exactOnlineApiUrl + currentDivision + "/";
 
-			_controllers = new ControllerList(_apiConnector, serviceRoot);
+            _controllers = new ControllerList(_apiConnector, serviceRoot, ServiceList);
 		}
+
+        public ExactOnlineClient(string exactOnlineUrl, int division, AccessTokenManagerDelegate accesstokenDelegate)
+            : this(exactOnlineUrl, division, accesstokenDelegate, new Services())
+        {
+        }
 
 		/// <summary>
 		/// Create instance of ExactClient

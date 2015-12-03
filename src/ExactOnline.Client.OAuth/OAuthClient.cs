@@ -60,7 +60,7 @@ namespace ExactOnline.Client.OAuth
 
 		#region Private methods
 
-		private static bool AccessTokenHasToBeRefreshed(IAuthorizationState authorization)
+		protected static bool AccessTokenHasToBeRefreshed(IAuthorizationState authorization)
 		{
 			if (authorization.AccessToken == null && authorization.RefreshToken != null)
 			{
@@ -75,7 +75,7 @@ namespace ExactOnline.Client.OAuth
 			return false;
 		}
 
-		private Uri GetAuthorizationUri(IAuthorizationState authorization)
+		protected Uri GetAuthorizationUri(IAuthorizationState authorization)
 		{
 			var baseUri = RequestUserAuthorization(authorization);
 

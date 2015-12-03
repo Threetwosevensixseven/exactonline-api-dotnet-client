@@ -3,314 +3,314 @@
 <SupportedActionsSDK(True, True, True, True)>
 <DataServiceKey("ID")>
 Public Class Account
-	'''<![CDATA[Reference to the accountant of the customer. Conditions: The referred accountant must have value > 0 in the field IsAccountant]]>
-	Public Property [Accountant] As Guid?
-	'''<![CDATA[ID of the account manager]]>
-	Public Property [AccountManager] As Guid?
-	'''<![CDATA[Name of the account manager]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [AccountManagerFullName] As String
-	'''<![CDATA[Number of the account manager  ]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [AccountManagerHID] As Int32?
-	'''<![CDATA[Reference to Activity sector of the account]]>
-	Public Property [ActivitySector] As Guid?
-	'''<![CDATA[Reference to Activity sub-sector of the account]]>
-	Public Property [ActivitySubSector] As Guid?
-	'''<![CDATA[Visit address first line]]>
-	Public Property [AddressLine1] As String
-	'''<![CDATA[Visit address second line]]>
-	Public Property [AddressLine2] As String
-	'''<![CDATA[Visit address third line]]>
-	Public Property [AddressLine3] As String
-	'''<![CDATA[Collection of Bank accounts]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [BankAccounts] As IEnumerable(Of BankAccount)
-	'''<![CDATA[Indicates if the account is blocked]]>
-	Public Property [Blocked] As Boolean?
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [BRIN] As Guid?
-	'''<![CDATA[Reference to the business type of the account]]>
-	Public Property [BusinessType] As Guid?
-	'''<![CDATA[Indicates the default for the possibility to drop ship when an item is linked to a supplier]]>
-	Public Property [CanDropShip] As Boolean?
-	'''<![CDATA[Chamber of commerce number]]>
-	Public Property [ChamberOfCommerce] As String
-	'''<![CDATA[Visit address City]]>
-	Public Property [City] As String
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Classification] As String
-	'''<![CDATA[Account classification 1]]>
-	Public Property [Classification1] As Guid?
-	'''<![CDATA[Account classification 2]]>
-	Public Property [Classification2] As Guid?
-	'''<![CDATA[Account classification 3]]>
-	Public Property [Classification3] As Guid?
-	'''<![CDATA[Account classification 4]]>
-	Public Property [Classification4] As Guid?
-	'''<![CDATA[Account classification 5]]>
-	Public Property [Classification5] As Guid?
-	'''<![CDATA[Account classification 6]]>
-	Public Property [Classification6] As Guid?
-	'''<![CDATA[Account classification 7]]>
-	Public Property [Classification7] As Guid?
-	'''<![CDATA[Account classification 8]]>
-	Public Property [Classification8] As Guid?
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [ClassificationDescription] As String
-	'''<![CDATA[Unique key, fixed length numeric string with leading spaces, length 18. IMPORTANT: When you use OData $filter on this field you have to make sure the filter parameter contains the leading spaces]]>
-	Public Property [Code] As String
-	'''<![CDATA[Code under which your own company is known at the account]]>
-	Public Property [CodeAtSupplier] As String
-	'''<![CDATA[Reference to Company size of the account]]>
-	Public Property [CompanySize] As Guid?
-	'''<![CDATA[Consolidation scenario (Time & Billing). Values: 0 = No consolidation, 1 = Item, 2 = Item + Project, 3 = Item + Employee, 4 = Item + Employee + Project. Item means in this case including Unit and Price, these also have to be the same to consolidate]]>
-	Public Property [ConsolidationScenario] As Byte?
-	'''<![CDATA[Date of the latest control of account data with external web service]]>
-	Public Property [ControlledDate] As DateTime?
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Costcenter] As String
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [CostcenterDescription] As String
-	Public Property [CostPaid] As Byte
-	'''<![CDATA[Country code]]>
-	Public Property [Country] As String
-	'''<![CDATA[Country name]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [CountryName] As String
-	'''<![CDATA[Creation date]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Created] As DateTime?
-	'''<![CDATA[User ID of creator]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Creator] As Guid?
-	'''<![CDATA[Name of creator]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [CreatorFullName] As String
-	'''<![CDATA[Maximum amount of credit for Purchase. If no value has been defined, there is no credit limit]]>
-	Public Property [CreditLinePurchase] As Double?
-	'''<![CDATA[Maximum amount of credit for sales. If no value has been defined, there is no credit limit]]>
-	Public Property [CreditLineSales] As Double?
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Currency] As String
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [CustomerSince] As DateTime?
-	'''<![CDATA[Default discount percentage for purchase. This is stored as a fraction. ie 5.5% is stored as .055]]>
-	Public Property [DiscountPurchase] As Double?
-	'''<![CDATA[Default discount percentage for sales. This is stored as a fraction. ie 5.5% is stored as .055]]>
-	Public Property [DiscountSales] As Double?
-	'''<![CDATA[Division code]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Division] As Int32?
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Document] As Guid?
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [DunsNumber] As String
-	'''<![CDATA[E-Mail address of the account]]>
-	Public Property [Email] As String
-	'''<![CDATA[Determines in combination with the start date if the account is active. If the current date is > end date the account is inactive]]>
-	Public Property [EndDate] As DateTime?
-	'''<![CDATA[Fax number]]>
-	Public Property [Fax] As String
-	'''<![CDATA[Default (corporate) GL offset account for purchase (cost)]]>
-	Public Property [GLAccountPurchase] As Guid?
-	'''<![CDATA[Default (corporate) GL offset account for sales (revenue)]]>
-	Public Property [GLAccountSales] As Guid?
-	'''<![CDATA[Default GL account for Accounts Payable]]>
-	Public Property [GLAP] As Guid?
-	'''<![CDATA[Default GL account for Accounts Receivable]]>
-	Public Property [GLAR] As Guid?
-	'''<![CDATA[Primary key]]>
-	Public Property [ID] As Guid
-	'''<![CDATA[Intrastat Area]]>
-	Public Property [IntraStatArea] As String
-	'''<![CDATA[Intrastat delivery method]]>
-	Public Property [IntraStatDeliveryTerm] As String
-	'''<![CDATA[System for Intrastat]]>
-	Public Property [IntraStatSystem] As String
-	'''<![CDATA[Transaction type A for Intrastat]]>
-	Public Property [IntraStatTransactionA] As String
-	'''<![CDATA[Transaction type B for Intrastat]]>
-	Public Property [IntraStatTransactionB] As String
-	'''<![CDATA[Transport method for Intrastat]]>
-	Public Property [IntraStatTransportMethod] As String
-	'''<![CDATA[ID of account to be invoiced instead of this account]]>
-	Public Property [InvoiceAccount] As Guid?
-	'''<![CDATA[Code of InvoiceAccount]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [InvoiceAccountCode] As String
-	'''<![CDATA[Name of InvoiceAccount]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [InvoiceAccountName] As String
-	'''<![CDATA[Indicates which attachment types should be sent when a sales invoice is printed. Only values in related table with Invoice=1 are allowed]]>
-	Public Property [InvoiceAttachmentType] As Int32?
-	'''<![CDATA[Method of sending for sales invoices. Values: 1: Paper, 2: EMail, 4: Mailbox (electronic exchange)]]>
-	Public Property [InvoicingMethod] As Int32?
-	'''<![CDATA[Indicates whether the account is an accountant. Values: 0 = No accountant, 1 = True, but accountant doesn't want his name to be published in the list of accountants, 2 = True, and accountant is published in the list of accountants]]>
-	Public Property [IsAccountant] As Byte
-	'''<![CDATA[Indicates whether the accounti is an agency]]>
-	Public Property [IsAgency] As Byte
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [IsBank] As Boolean?
-	'''<![CDATA[Indicates whether the account is a competitor]]>
-	Public Property [IsCompetitor] As Byte
-	'''<![CDATA[Indicates if the account is excluded from mailing marketing information]]>
-	Public Property [IsMailing] As Byte
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [IsMember] As Boolean?
-	'''<![CDATA[Indicates whether the account is a pilot account]]>
-	Public Property [IsPilot] As Boolean?
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [IsPurchase] As Boolean?
-	'''<![CDATA[Indicates whether the account is a reseller]]>
-	Public Property [IsReseller] As Boolean?
-	'''<![CDATA[Indicates whether the account is allowed for sales]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [IsSales] As Boolean?
-	'''<![CDATA[Indicates whether the account is a supplier]]>
-	Public Property [IsSupplier] As Boolean?
-	'''<![CDATA[Language code]]>
-	Public Property [Language] As String
-	'''<![CDATA[Language description]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [LanguageDescription] As String
-	'''<![CDATA[Latitude (used by Google maps)]]>
-	Public Property [Latitude] As Double?
-	'''<![CDATA[Reference to Lead source of an account]]>
-	Public Property [LeadSource] As Guid?
-	'''<![CDATA[Bytes of the logo image]]>
-	Public Property [Logo] As Byte()
-	'''<![CDATA[The file name (without path, but with extension) of the image]]>
-	Public Property [LogoFileName] As String
-	'''<![CDATA[Thumbnail url of the logo]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [LogoThumbnailUrl] As String
-	'''<![CDATA[Url to retrieve the logo]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [LogoUrl] As String
-	'''<![CDATA[Longitude (used by Google maps)]]>
-	Public Property [Longitude] As Double?
-	'''<![CDATA[Reference to main contact person]]>
-	Public Property [MainContact] As Guid?
-	'''<![CDATA[Last modified date]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Modified] As DateTime?
-	'''<![CDATA[User ID of modifier]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Modifier] As Guid?
-	'''<![CDATA[Name of modifier]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [ModifierFullName] As String
-	'''<![CDATA[Account name]]>
-	Public Property [Name] As String
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Parent] As Guid?
-	'''<![CDATA[Code of default payment condition for purchase]]>
-	Public Property [PaymentConditionPurchase] As String
-	'''<![CDATA[Description of PaymentConditionPurchase]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [PaymentConditionPurchaseDescription] As String
-	'''<![CDATA[Code of default payment condition for sales]]>
-	Public Property [PaymentConditionSales] As String
-	'''<![CDATA[Description of PaymentConditionSales]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [PaymentConditionSalesDescription] As String
-	'''<![CDATA[Phone number]]>
-	Public Property [Phone] As String
-	'''<![CDATA[Phone number extention]]>
-	Public Property [PhoneExtension] As String
-	'''<![CDATA[Visit address postcode]]>
-	Public Property [Postcode] As String
-	'''<![CDATA[Default sales price list for account]]>
-	Public Property [PriceList] As Guid?
-	'''<![CDATA[Currency of purchase]]>
-	Public Property [PurchaseCurrency] As String
-	'''<![CDATA[Description of PurchaseCurrency]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [PurchaseCurrencyDescription] As String
-	'''<![CDATA[Indicates number of days required to receive a purchase. Acts as a default]]>
-	Public Property [PurchaseLeadDays] As Int32?
-	'''<![CDATA[Default VAT code used for purchase entries]]>
-	Public Property [PurchaseVATCode] As String
-	'''<![CDATA[Description of PurchaseVATCode]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [PurchaseVATCodeDescription] As String
-	'''<![CDATA[Define the relation that should be taken in the official document of the rewarding fiscal fiches Belcotax]]>
-	Public Property [RecepientOfCommissions] As Boolean?
-	'''<![CDATA[Remarks]]>
-	Public Property [Remarks] As String
-	'''<![CDATA[ID of the reseller account. Conditions: the target account must have the property IsReseller turned on]]>
-	Public Property [Reseller] As Guid?
-	'''<![CDATA[Code of Reseller]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [ResellerCode] As String
-	'''<![CDATA[Name of Reseller]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [ResellerName] As String
-	'''<![CDATA[Currency of Sales used for Time & Billing]]>
-	Public Property [SalesCurrency] As String
-	'''<![CDATA[Description of SalesCurrency]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [SalesCurrencyDescription] As String
-	'''<![CDATA[Default tax schedule when creating sales orders or sales invoices]]>
-	Public Property [SalesTaxSchedule] As Guid?
-	'''<![CDATA[Code of the tax schedule]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [SalesTaxScheduleCode] As String
-	'''<![CDATA[Description of the tax schedule]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [SalesTaxScheduleDescription] As String
-	'''<![CDATA[Default VAT code for a sales entry]]>
-	Public Property [SalesVATCode] As String
-	'''<![CDATA[Description of SalesVATCode]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [SalesVATCodeDescription] As String
-	'''<![CDATA[Search code]]>
-	Public Property [SearchCode] As String
-	'''<![CDATA[Security level (0 - 100)]]>
-	Public Property [SecurityLevel] As Int32?
-	'''<![CDATA[Separate invoice per project (Time & Billing)]]>
-	Public Property [SeparateInvPerProject] As Byte
-	'''<![CDATA[Indicates how invoices are generated from subscriptions. 0 = subscriptions belonging to the same customer are combined in a single invoice. 1 = each subscription results in one invoice. In both cases, each individual subscription line results in one invoice line]]>
-	Public Property [SeparateInvPerSubscription] As Byte
-	'''<![CDATA[Indicates the number of days it takes to send goods to the customer. Acts as a default]]>
-	Public Property [ShippingLeadDays] As Int32?
-	'''<![CDATA[Default shipping method]]>
-	Public Property [ShippingMethod] As Guid?
-	'''<![CDATA[Indicates in combination with the end date if the account is active]]>
-	Public Property [StartDate] As DateTime?
-	'''<![CDATA[State/Province code]]>
-	Public Property [State] As String
-	'''<![CDATA[Name of State]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [StateName] As String
-	'''<![CDATA[If the status field is filled this means the account is a customer. The value indicates the customer status. Possible values: A=None, S=Suspect, P=Prospect, C=Customer]]>
-	Public Property [Status] As String
-	'''<![CDATA[Obsolete]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [StatusSince] As DateTime?
-	'''<![CDATA[Account type: Values: A = Relation, D = Division]]>
-	<SDKFieldType(FieldType.ReadOnly)>
-	Public Property [Type] As String
-	'''<![CDATA[Indicates the VAT status of an account to be able to identify the relation that should be selected in the VAT debtor listing in Belgium]]>
-	Public Property [VATLiability] As String
-	'''<![CDATA[The number under which the account is known at the Value Added Tax collection agency]]>
-	Public Property [VATNumber] As String
-	'''<![CDATA[Website of the account]]>
-	Public Property [Website] As String
+    '''<![CDATA[Reference to the accountant of the customer. Conditions: The referred accountant must have value > 0 in the field IsAccountant]]>
+    Public Property [Accountant] As Guid?
+    '''<![CDATA[ID of the account manager]]>
+    Public Property [AccountManager] As Guid?
+    '''<![CDATA[Name of the account manager]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [AccountManagerFullName] As String
+    '''<![CDATA[Number of the account manager  ]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [AccountManagerHID] As Int32?
+    '''<![CDATA[Reference to Activity sector of the account]]>
+    Public Property [ActivitySector] As Guid?
+    '''<![CDATA[Reference to Activity sub-sector of the account]]>
+    Public Property [ActivitySubSector] As Guid?
+    '''<![CDATA[Visit address first line]]>
+    Public Property [AddressLine1] As String
+    '''<![CDATA[Visit address second line]]>
+    Public Property [AddressLine2] As String
+    '''<![CDATA[Visit address third line]]>
+    Public Property [AddressLine3] As String
+    '''<![CDATA[Collection of Bank accounts]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [BankAccounts] As IEnumerable(Of BankAccount)
+    '''<![CDATA[Indicates if the account is blocked]]>
+    Public Property [Blocked] As Boolean?
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [BRIN] As Guid?
+    '''<![CDATA[Reference to the business type of the account]]>
+    Public Property [BusinessType] As Guid?
+    '''<![CDATA[Indicates the default for the possibility to drop ship when an item is linked to a supplier]]>
+    Public Property [CanDropShip] As Boolean?
+    '''<![CDATA[Chamber of commerce number]]>
+    Public Property [ChamberOfCommerce] As String
+    '''<![CDATA[Visit address City]]>
+    Public Property [City] As String
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Classification] As String
+    '''<![CDATA[Account classification 1]]>
+    Public Property [Classification1] As Guid?
+    '''<![CDATA[Account classification 2]]>
+    Public Property [Classification2] As Guid?
+    '''<![CDATA[Account classification 3]]>
+    Public Property [Classification3] As Guid?
+    '''<![CDATA[Account classification 4]]>
+    Public Property [Classification4] As Guid?
+    '''<![CDATA[Account classification 5]]>
+    Public Property [Classification5] As Guid?
+    '''<![CDATA[Account classification 6]]>
+    Public Property [Classification6] As Guid?
+    '''<![CDATA[Account classification 7]]>
+    Public Property [Classification7] As Guid?
+    '''<![CDATA[Account classification 8]]>
+    Public Property [Classification8] As Guid?
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [ClassificationDescription] As String
+    '''<![CDATA[Unique key, fixed length numeric string with leading spaces, length 18. IMPORTANT: When you use OData $filter on this field you have to make sure the filter parameter contains the leading spaces]]>
+    Public Property [Code] As String
+    '''<![CDATA[Code under which your own company is known at the account]]>
+    Public Property [CodeAtSupplier] As String
+    '''<![CDATA[Reference to Company size of the account]]>
+    Public Property [CompanySize] As Guid?
+    '''<![CDATA[Consolidation scenario (Time & Billing). Values: 0 = No consolidation, 1 = Item, 2 = Item + Project, 3 = Item + Employee, 4 = Item + Employee + Project. Item means in this case including Unit and Price, these also have to be the same to consolidate]]>
+    Public Property [ConsolidationScenario] As Byte?
+    '''<![CDATA[Date of the latest control of account data with external web service]]>
+    Public Property [ControlledDate] As DateTime?
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Costcenter] As String
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [CostcenterDescription] As String
+    Public Property [CostPaid] As Byte
+    '''<![CDATA[Country code]]>
+    Public Property [Country] As String
+    '''<![CDATA[Country name]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [CountryName] As String
+    '''<![CDATA[Creation date]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Created] As DateTime?
+    '''<![CDATA[User ID of creator]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Creator] As Guid?
+    '''<![CDATA[Name of creator]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [CreatorFullName] As String
+    '''<![CDATA[Maximum amount of credit for Purchase. If no value has been defined, there is no credit limit]]>
+    Public Property [CreditLinePurchase] As Double?
+    '''<![CDATA[Maximum amount of credit for sales. If no value has been defined, there is no credit limit]]>
+    Public Property [CreditLineSales] As Double?
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Currency] As String
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [CustomerSince] As DateTime?
+    '''<![CDATA[Default discount percentage for purchase. This is stored as a fraction. ie 5.5% is stored as .055]]>
+    Public Property [DiscountPurchase] As Double?
+    '''<![CDATA[Default discount percentage for sales. This is stored as a fraction. ie 5.5% is stored as .055]]>
+    Public Property [DiscountSales] As Double?
+    '''<![CDATA[Division code]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Division] As Int32?
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Document] As Guid?
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [DunsNumber] As String
+    '''<![CDATA[E-Mail address of the account]]>
+    Public Property [Email] As String
+    '''<![CDATA[Determines in combination with the start date if the account is active. If the current date is > end date the account is inactive]]>
+    Public Property [EndDate] As DateTime?
+    '''<![CDATA[Fax number]]>
+    Public Property [Fax] As String
+    '''<![CDATA[Default (corporate) GL offset account for purchase (cost)]]>
+    Public Property [GLAccountPurchase] As Guid?
+    '''<![CDATA[Default (corporate) GL offset account for sales (revenue)]]>
+    Public Property [GLAccountSales] As Guid?
+    '''<![CDATA[Default GL account for Accounts Payable]]>
+    Public Property [GLAP] As Guid?
+    '''<![CDATA[Default GL account for Accounts Receivable]]>
+    Public Property [GLAR] As Guid?
+    '''<![CDATA[Primary key]]>
+    Public Property [ID] As Guid
+    '''<![CDATA[Intrastat Area]]>
+    Public Property [IntraStatArea] As String
+    '''<![CDATA[Intrastat delivery method]]>
+    Public Property [IntraStatDeliveryTerm] As String
+    '''<![CDATA[System for Intrastat]]>
+    Public Property [IntraStatSystem] As String
+    '''<![CDATA[Transaction type A for Intrastat]]>
+    Public Property [IntraStatTransactionA] As String
+    '''<![CDATA[Transaction type B for Intrastat]]>
+    Public Property [IntraStatTransactionB] As String
+    '''<![CDATA[Transport method for Intrastat]]>
+    Public Property [IntraStatTransportMethod] As String
+    '''<![CDATA[ID of account to be invoiced instead of this account]]>
+    Public Property [InvoiceAccount] As Guid?
+    '''<![CDATA[Code of InvoiceAccount]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [InvoiceAccountCode] As String
+    '''<![CDATA[Name of InvoiceAccount]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [InvoiceAccountName] As String
+    '''<![CDATA[Indicates which attachment types should be sent when a sales invoice is printed. Only values in related table with Invoice=1 are allowed]]>
+    Public Property [InvoiceAttachmentType] As Int32?
+    '''<![CDATA[Method of sending for sales invoices. Values: 1: Paper, 2: EMail, 4: Mailbox (electronic exchange)]]>
+    Public Property [InvoicingMethod] As Int32?
+    '''<![CDATA[Indicates whether the account is an accountant. Values: 0 = No accountant, 1 = True, but accountant doesn't want his name to be published in the list of accountants, 2 = True, and accountant is published in the list of accountants]]>
+    Public Property [IsAccountant] As Byte
+    '''<![CDATA[Indicates whether the accounti is an agency]]>
+    Public Property [IsAgency] As Byte
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [IsBank] As Boolean?
+    '''<![CDATA[Indicates whether the account is a competitor]]>
+    Public Property [IsCompetitor] As Byte
+    '''<![CDATA[Indicates if the account is excluded from mailing marketing information]]>
+    Public Property [IsMailing] As Byte
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [IsMember] As Boolean?
+    '''<![CDATA[Indicates whether the account is a pilot account]]>
+    Public Property [IsPilot] As Boolean?
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [IsPurchase] As Boolean?
+    '''<![CDATA[Indicates whether the account is a reseller]]>
+    Public Property [IsReseller] As Boolean?
+    '''<![CDATA[Indicates whether the account is allowed for sales]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [IsSales] As Boolean?
+    '''<![CDATA[Indicates whether the account is a supplier]]>
+    Public Property [IsSupplier] As Boolean?
+    '''<![CDATA[Language code]]>
+    Public Property [Language] As String
+    '''<![CDATA[Language description]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [LanguageDescription] As String
+    '''<![CDATA[Latitude (used by Google maps)]]>
+    Public Property [Latitude] As Double?
+    '''<![CDATA[Reference to Lead source of an account]]>
+    Public Property [LeadSource] As Guid?
+    '''<![CDATA[Bytes of the logo image]]>
+    Public Property [Logo] As Byte()
+    '''<![CDATA[The file name (without path, but with extension) of the image]]>
+    Public Property [LogoFileName] As String
+    '''<![CDATA[Thumbnail url of the logo]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [LogoThumbnailUrl] As String
+    '''<![CDATA[Url to retrieve the logo]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [LogoUrl] As String
+    '''<![CDATA[Longitude (used by Google maps)]]>
+    Public Property [Longitude] As Double?
+    '''<![CDATA[Reference to main contact person]]>
+    Public Property [MainContact] As Guid?
+    '''<![CDATA[Last modified date]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Modified] As DateTime?
+    '''<![CDATA[User ID of modifier]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Modifier] As Guid?
+    '''<![CDATA[Name of modifier]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [ModifierFullName] As String
+    '''<![CDATA[Account name]]>
+    Public Property [Name] As String
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Parent] As Guid?
+    '''<![CDATA[Code of default payment condition for purchase]]>
+    Public Property [PaymentConditionPurchase] As String
+    '''<![CDATA[Description of PaymentConditionPurchase]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [PaymentConditionPurchaseDescription] As String
+    '''<![CDATA[Code of default payment condition for sales]]>
+    Public Property [PaymentConditionSales] As String
+    '''<![CDATA[Description of PaymentConditionSales]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [PaymentConditionSalesDescription] As String
+    '''<![CDATA[Phone number]]>
+    Public Property [Phone] As String
+    '''<![CDATA[Phone number extention]]>
+    Public Property [PhoneExtension] As String
+    '''<![CDATA[Visit address postcode]]>
+    Public Property [Postcode] As String
+    '''<![CDATA[Default sales price list for account]]>
+    Public Property [PriceList] As Guid?
+    '''<![CDATA[Currency of purchase]]>
+    Public Property [PurchaseCurrency] As String
+    '''<![CDATA[Description of PurchaseCurrency]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [PurchaseCurrencyDescription] As String
+    '''<![CDATA[Indicates number of days required to receive a purchase. Acts as a default]]>
+    Public Property [PurchaseLeadDays] As Int32?
+    '''<![CDATA[Default VAT code used for purchase entries]]>
+    Public Property [PurchaseVATCode] As String
+    '''<![CDATA[Description of PurchaseVATCode]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [PurchaseVATCodeDescription] As String
+    '''<![CDATA[Define the relation that should be taken in the official document of the rewarding fiscal fiches Belcotax]]>
+    Public Property [RecepientOfCommissions] As Boolean?
+    '''<![CDATA[Remarks]]>
+    Public Property [Remarks] As String
+    '''<![CDATA[ID of the reseller account. Conditions: the target account must have the property IsReseller turned on]]>
+    Public Property [Reseller] As Guid?
+    '''<![CDATA[Code of Reseller]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [ResellerCode] As String
+    '''<![CDATA[Name of Reseller]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [ResellerName] As String
+    '''<![CDATA[Currency of Sales used for Time & Billing]]>
+    Public Property [SalesCurrency] As String
+    '''<![CDATA[Description of SalesCurrency]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [SalesCurrencyDescription] As String
+    '''<![CDATA[Default tax schedule when creating sales orders or sales invoices]]>
+    Public Property [SalesTaxSchedule] As Guid?
+    '''<![CDATA[Code of the tax schedule]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [SalesTaxScheduleCode] As String
+    '''<![CDATA[Description of the tax schedule]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [SalesTaxScheduleDescription] As String
+    '''<![CDATA[Default VAT code for a sales entry]]>
+    Public Property [SalesVATCode] As String
+    '''<![CDATA[Description of SalesVATCode]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [SalesVATCodeDescription] As String
+    '''<![CDATA[Search code]]>
+    Public Property [SearchCode] As String
+    '''<![CDATA[Security level (0 - 100)]]>
+    Public Property [SecurityLevel] As Int32?
+    '''<![CDATA[Separate invoice per project (Time & Billing)]]>
+    Public Property [SeparateInvPerProject] As Byte
+    '''<![CDATA[Indicates how invoices are generated from subscriptions. 0 = subscriptions belonging to the same customer are combined in a single invoice. 1 = each subscription results in one invoice. In both cases, each individual subscription line results in one invoice line]]>
+    Public Property [SeparateInvPerSubscription] As Byte
+    '''<![CDATA[Indicates the number of days it takes to send goods to the customer. Acts as a default]]>
+    Public Property [ShippingLeadDays] As Int32?
+    '''<![CDATA[Default shipping method]]>
+    Public Property [ShippingMethod] As Guid?
+    '''<![CDATA[Indicates in combination with the end date if the account is active]]>
+    Public Property [StartDate] As DateTime?
+    '''<![CDATA[State/Province code]]>
+    Public Property [State] As String
+    '''<![CDATA[Name of State]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [StateName] As String
+    '''<![CDATA[If the status field is filled this means the account is a customer. The value indicates the customer status. Possible values: A=None, S=Suspect, P=Prospect, C=Customer]]>
+    Public Property [Status] As String
+    '''<![CDATA[Obsolete]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [StatusSince] As DateTime?
+    '''<![CDATA[Account type: Values: A = Relation, D = Division]]>
+    <SDKFieldType(FieldType.ReadOnly)>
+    Public Property [Type] As String
+    '''<![CDATA[Indicates the VAT status of an account to be able to identify the relation that should be selected in the VAT debtor listing in Belgium]]>
+    Public Property [VATLiability] As String
+    '''<![CDATA[The number under which the account is known at the Value Added Tax collection agency]]>
+    Public Property [VATNumber] As String
+    '''<![CDATA[Website of the account]]>
+    Public Property [Website] As String
 End Class
 
 <SupportedActionsSDK(False, True, False, False)>
@@ -4405,44 +4405,44 @@ End Class
 <SupportedActionsSDK(True, False, False, False)>
 <DataServiceKey("InvoiceID")>
 Public Class PrintedSalesInvoice
-	'''<![CDATA[Division code]]>
-	Public Property [Division] As Int32?
-	'''<![CDATA[Contains the id of the document that was created]]>
-	Public Property [Document] As Guid?
-	'''<![CDATA[Contains the error message if an error occurred during the creation of the document]]>
-	Public Property [DocumentCreationError] As String
-	'''<![CDATA[Contains information if a document was succesfully created]]>
-	Public Property [DocumentCreationSuccess] As String
-	'''<![CDATA[Based on this layout a PDF is created and attached to an Exact Online document and an email]]>
-	Public Property [DocumentLayout] As Guid?
-	'''<![CDATA[Contains the error message if an error occurred during the creation of the email]]>
-	Public Property [EmailCreationError] As String
-	'''<![CDATA[Contains confirmation that an email was sent. If an email cannot be delivered this property will still show confirmation that the email was sent.]]>
-	Public Property [EmailCreationSuccess] As String
-	'''<![CDATA[Based on this layout the email text is produced]]>
-	Public Property [EmailLayout] As Guid?
-	'''<![CDATA[Extra text that can be added to the printed document and email]]>
-	Public Property [ExtraText] As String
-	'''<![CDATA[Date of the invoice]]>
-	Public Property [InvoiceDate] As DateTime?
-	'''<![CDATA[Primary key, Reference to EntryID of SalesInvoice]]>
-	Public Property [InvoiceID] As Guid
-	'''<![CDATA[Contains the error message if an error occurred during the sending of a postbox message]]>
-	Public Property [PostboxMessageCreationError] As String
-	'''<![CDATA[Contains information if a postbox message was succesfully sent]]>
-	Public Property [PostboxMessageCreationSuccess] As String
-	'''<![CDATA[The postbox from where the message is sent]]>
-	Public Property [PostboxSender] As Guid?
-	'''<![CDATA[Reporting period]]>
-	Public Property [ReportingPeriod] As Int32?
-	'''<![CDATA[Reporting year]]>
-	Public Property [ReportingYear] As Int32?
-	'''<![CDATA[Set to True if an email containing the invoice should be sent to the invoice customer]]>
-	Public Property [SendEmailToCustomer] As Boolean?
-	'''<![CDATA[Set to True if a postbox message containing the invoice should be sent to the invoice customer]]>
-	Public Property [SendInvoiceToCustomerPostbox] As Boolean?
-	'''<![CDATA[Set to True if the output preference should be taken from the account. It will be either Paper, Email, Digital postbox. This option overrules both SendEmailToCustomer and SendInvoiceToCustomerPostbox.]]>
-	Public Property [SendOutputBasedOnAccount] As Boolean?
+    '''<![CDATA[Division code]]>
+    Public Property [Division] As Int32?
+    '''<![CDATA[Contains the id of the document that was created]]>
+    Public Property [Document] As Guid?
+    '''<![CDATA[Contains the error message if an error occurred during the creation of the document]]>
+    Public Property [DocumentCreationError] As String
+    '''<![CDATA[Contains information if a document was succesfully created]]>
+    Public Property [DocumentCreationSuccess] As String
+    '''<![CDATA[Based on this layout a PDF is created and attached to an Exact Online document and an email]]>
+    Public Property [DocumentLayout] As Guid?
+    '''<![CDATA[Contains the error message if an error occurred during the creation of the email]]>
+    Public Property [EmailCreationError] As String
+    '''<![CDATA[Contains confirmation that an email was sent. If an email cannot be delivered this property will still show confirmation that the email was sent.]]>
+    Public Property [EmailCreationSuccess] As String
+    '''<![CDATA[Based on this layout the email text is produced]]>
+    Public Property [EmailLayout] As Guid?
+    '''<![CDATA[Extra text that can be added to the printed document and email]]>
+    Public Property [ExtraText] As String
+    '''<![CDATA[Date of the invoice]]>
+    Public Property [InvoiceDate] As DateTime?
+    '''<![CDATA[Primary key, Reference to EntryID of SalesInvoice]]>
+    Public Property [InvoiceID] As Guid
+    '''<![CDATA[Contains the error message if an error occurred during the sending of a postbox message]]>
+    Public Property [PostboxMessageCreationError] As String
+    '''<![CDATA[Contains information if a postbox message was succesfully sent]]>
+    Public Property [PostboxMessageCreationSuccess] As String
+    '''<![CDATA[The postbox from where the message is sent]]>
+    Public Property [PostboxSender] As Guid?
+    '''<![CDATA[Reporting period]]>
+    Public Property [ReportingPeriod] As Int32?
+    '''<![CDATA[Reporting year]]>
+    Public Property [ReportingYear] As Int32?
+    '''<![CDATA[Set to True if an email containing the invoice should be sent to the invoice customer]]>
+    Public Property [SendEmailToCustomer] As Boolean?
+    '''<![CDATA[Set to True if a postbox message containing the invoice should be sent to the invoice customer]]>
+    Public Property [SendInvoiceToCustomerPostbox] As Boolean?
+    '''<![CDATA[Set to True if the output preference should be taken from the account. It will be either Paper, Email, Digital postbox. This option overrules both SendEmailToCustomer and SendInvoiceToCustomerPostbox.]]>
+    Public Property [SendOutputBasedOnAccount] As Boolean?
 End Class
 
 <SupportedActionsSDK(True, False, False, False)>
