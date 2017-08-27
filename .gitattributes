@@ -3,3 +3,4 @@
 *.csproj linguist-language=C#
 *.bat linguist-language=C#
 *.config linguist-language=C#
+*.settings linguist-language=C#
