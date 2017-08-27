@@ -1,7 +1,8 @@
+src/ExactOnline.Client.Models/My Project/* linguist-vendored
 *.cs linguist-language=C#
 *.resx linguist-language=C#
 *.csproj linguist-language=C#
 *.bat linguist-language=C#
 *.config linguist-language=C#
 *.settings linguist-language=C#
-src/ExactOnline.Client.Models/My Project/* linguist-documentation
+
