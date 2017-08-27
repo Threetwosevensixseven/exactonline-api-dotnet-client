@@ -1,1 +1,5 @@
 *.cs linguist-language=C#
+*.resx linguist-language=C#
+*.csproj linguist-language=C#
+*.bat linguist-language=C#
+*.config linguist-language=C#
