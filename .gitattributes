@@ -1,4 +1,4 @@
-src/ExactOnline.Client.Models/My Project/* linguist-vendored
+src/ExactOnline.Client.Models/* linguist-vendored
 *.cs linguist-language=C#
 *.resx linguist-language=C#
 *.csproj linguist-language=C#
