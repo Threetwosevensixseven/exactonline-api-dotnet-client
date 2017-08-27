@@ -4,3 +4,4 @@
 *.bat linguist-language=C#
 *.config linguist-language=C#
 *.settings linguist-language=C#
+src/ExactOnline.Client.Models/My Project/* linguist-documentation
